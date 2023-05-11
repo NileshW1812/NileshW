@@ -1,5 +1,7 @@
 package TestCase2;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -25,19 +27,32 @@ public class VerifyTextField {
 
 	}
 
-	@Test(priority = 1, groups = { "sanity" }, enabled = true)
-	public void verifyloginUsingSendText() throws IOException {
+	@Test(priority = 1, groups = { "sanity" }, enabled = false)
+	public void verifyloginUsingSendText() {
 		homepageomayo.getText().sendKeys("This is my text");
 		homepageomayo.getPasswordtext().sendKeys("nrw@123");
 		homepageomayo.getLoginbutton().click();
 	}
 
-	@Test(priority = 0, groups = { "sanity" }, enabled = true)
-	public void verifyLoginUsingUtilityClass() throws IOException {
+	@Test(priority = 0, groups = { "sanity" }, enabled = false)
+	public void verifyLoginUsingUtilityClass() {
 		homepageomayo.getText().sendKeys(Utility2.getProperty("UserName"));
 		homepageomayo.getPasswordtext().sendKeys(Utility2.getProperty("PassWord"));
 		homepageomayo.getLoginbutton().click();
 	}
+
+	@Test(priority = 10, groups = { "sanity" }, enabled = true)
+	public void verifyPasswordTextDisplayed() {
+		assertTrue(homepageomayo.getPasswordtext().isDisplayed());
+		homepageomayo.getPasswordtext().sendKeys("nrw@123");
+	}
+	
+	@Test(priority = 10, groups = { "sanity" }, enabled = true)
+	public void verifyUserNameTextDisplayed() {
+		assertTrue(homepageomayo.getText().isDisplayed());
+		homepageomayo.getText().sendKeys("nilesh");
+	}
+
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {

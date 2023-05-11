@@ -2,6 +2,7 @@ package pages2;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -195,4 +196,30 @@ public class HomePageOmayo {
 
 	}
 
+	public void MultipleWidowHandle() {
+		String parentwindowhandle = driver.getWindowHandle();
+		Set<String> allwindowhandles = driver.getWindowHandles();
+		for (String handle : allwindowhandles) {
+			if (!(handle.equals(parentwindowhandle))) {
+				driver.switchTo().window(handle);
+				if (driver.getTitle().equals("http://selenium143.blogspot.com/"))
+					;
+			}
+		}
+		driver.findElement(By.xpath("//a[@id='sc_counter_9037253']")).click();
+		allwindowhandles = driver.getWindowHandles();
+		for (String handle2 : allwindowhandles) {
+			if (handle2.equals(parentwindowhandle)) {
+				driver.switchTo().window(handle2);
+				if (driver.getTitle().equals("http://selenium143.blogspot.com/")) {
+					;
+					continue;
+				}
+			}
+		}
+		System.out.println(driver.getTitle());
+		driver.switchTo().window(parentwindowhandle);
+		driver.navigate().back();
+
+	}
 }

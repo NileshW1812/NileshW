@@ -1,10 +1,10 @@
 package TestCase2;
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -12,26 +12,24 @@ import org.testng.annotations.Test;
 
 import com.nilesh.project.Utility2;
 
-import pages2.NewToursHomePage2;
+import pages2.HomePageOmayo;
 
-public class VerifyNewPageTitle {
+public class HandleMultipleWindow {
 	WebDriver driver;
-	NewToursHomePage2 newtourshomepage2;
+	HomePageOmayo homepageomayo;
 
 	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws IOException {
 		driver = Utility2.getDriver();
 		driver.get(Utility2.getProperty("url"));
 		driver.manage().window().maximize();
-		newtourshomepage2 = new NewToursHomePage2(driver);
+		homepageomayo = new HomePageOmayo(driver);
 	}
 
 	@Test(priority = 1, groups = { "sanity" }, enabled = true)
-	public void VerifyNewToursTitle() throws IOException {
-		String ExpTitle = "Welcome: Mercury Tours";
-		assertEquals(ExpTitle, driver.getTitle());
-
-//		Utility2.getScreenshot(driver, "omayotitle");
+	public void VerifyHandleMultipleWindow() {
+		
+	
 	}
 
 	@AfterMethod(alwaysRun = true)
