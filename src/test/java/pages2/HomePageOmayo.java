@@ -28,6 +28,15 @@ public class HomePageOmayo {
 	WebElement text;
 	WebElement passwordtext;
 	WebElement loginbutton;
+	WebElement dropdownbutton;
+	WebElement link1;
+	WebElement pencheckbox;
+	WebElement bookcheckbox;
+	WebElement laptopcheckbox;
+	WebElement bagcheckbox;
+
+
+
 
 	public HomePageOmayo(WebDriver driver) {
 		this.driver = driver;
@@ -159,6 +168,15 @@ public class HomePageOmayo {
 		this.passwordtext = driver.findElement(By.xpath("//input[@type='password']"));
 	}
 
+	public WebElement getDropdownbutton() {
+		setDropdownbutton();
+		return dropdownbutton;
+	}
+
+	public void setDropdownbutton() {
+		this.dropdownbutton = driver.findElement(By.xpath("//button[@onclick='setTimeout(myFunction,3000)']"));
+	}
+
 	public WebElement getLoginbutton() {
 		setLoginbutton();
 		return loginbutton;
@@ -166,6 +184,51 @@ public class HomePageOmayo {
 
 	public void setLoginbutton() {
 		this.loginbutton = driver.findElement(By.xpath("//button[@type='button']"));
+	}
+
+	public WebElement getLink1() {
+		setLink1();
+		return link1;
+	}
+
+	public void setLink1() {
+		this.link1 = driver.findElement(By.xpath("//a[@id='link1']"));
+	}
+
+	public WebElement getPencheckbox() {
+		setPencheckbox();
+		return pencheckbox;
+	}
+
+	public void setPencheckbox() {
+		this.pencheckbox =driver.findElement(By.xpath("//input[@value='Pen']"));
+	}
+
+	public WebElement getBookcheckbox() {
+		setBookcheckbox();
+		return bookcheckbox;
+	}
+
+	public void setBookcheckbox() {
+		this.bookcheckbox =driver.findElement(By.xpath("//input[@value='Book']"));
+	}
+
+	public WebElement getLaptopcheckbox() {
+		setLaptopcheckbox();
+		return laptopcheckbox;
+	}
+
+	public void setLaptopcheckbox() {
+		this.laptopcheckbox =driver.findElement(By.xpath("//input[@value='Laptop']"));
+	}
+
+	public WebElement getBagcheckbox() {
+		setBagcheckbox();
+		return bagcheckbox;
+	}
+
+	public void setBagcheckbox() {
+		this.bagcheckbox =driver.findElement(By.xpath("//input[@value='Bag']"));
 	}
 
 	public String selectDropdown(String string) {
@@ -196,30 +259,4 @@ public class HomePageOmayo {
 
 	}
 
-	public void MultipleWidowHandle() {
-		String parentwindowhandle = driver.getWindowHandle();
-		Set<String> allwindowhandles = driver.getWindowHandles();
-		for (String handle : allwindowhandles) {
-			if (!(handle.equals(parentwindowhandle))) {
-				driver.switchTo().window(handle);
-				if (driver.getTitle().equals("http://selenium143.blogspot.com/"))
-					;
-			}
-		}
-		driver.findElement(By.xpath("//a[@id='sc_counter_9037253']")).click();
-		allwindowhandles = driver.getWindowHandles();
-		for (String handle2 : allwindowhandles) {
-			if (handle2.equals(parentwindowhandle)) {
-				driver.switchTo().window(handle2);
-				if (driver.getTitle().equals("http://selenium143.blogspot.com/")) {
-					;
-					continue;
-				}
-			}
-		}
-		System.out.println(driver.getTitle());
-		driver.switchTo().window(parentwindowhandle);
-		driver.navigate().back();
-
-	}
 }

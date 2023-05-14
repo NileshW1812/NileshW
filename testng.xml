@@ -4,6 +4,7 @@
 	<groups>
 		<run>
 			<include name="e2e"></include>
+			<include name="sanity"></include>
 		</run>
 	</groups>
 	<listeners>
@@ -13,6 +14,7 @@
 		<classes>
 			<class name="TestCase.VerifyOmayoBlogHomePgae" />
 			<class name="TestCase.VerifyRadioButtonAndCheckBox" />
+			<class name="TestCase2.VerifyTextField" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -29,9 +29,11 @@ public class VerifyNewToursRegistration2WithExcel {
 		registrationPage = new RegistrationPage(driver);
 	}
 
-	@Test(dataProvider = "registraion")
+	@Test(dataProvider = "registration")
 	public void VerifyRegistration(String firstName, String lastName, String phone, String email) {
+
 		newToursHomePage.clickOnRegistrationLink();
+
 		registrationPage.getFirstNameTestField().sendKeys(firstName);
 		registrationPage.getLastNameTestField().sendKeys(lastName);
 		registrationPage.getPhoneTestField().sendKeys(phone);
@@ -48,17 +50,13 @@ public class VerifyNewToursRegistration2WithExcel {
 
 	}
 
-	@DataProvider(name = "registraion")
+	@DataProvider(name = "registration")
 
-	public String[][] registrationDataProvider() {
+	public String[][] registrationDataProvider() throws IOException {
 
 		List<String> data = null;
-		try {
-			data = Utility2.readExcel();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+		data = Utility2.readExcel();
 
 		String[][] registration = new String[1][4];
 
