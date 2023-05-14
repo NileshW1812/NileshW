@@ -12,12 +12,15 @@ import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+
+
 
 public class Utility2 {
 	public static WebDriver getDriver() {
@@ -58,31 +61,50 @@ public class Utility2 {
 		List<String> userRegistrationDetails = new ArrayList<String>();
 
 		// reading .xls file
-
-		@SuppressWarnings("resource")
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(fileInputStream);
-		{
-			HSSFSheet sheet = hssfWorkbook.getSheetAt(0);
 
-			int lastRowNumer = sheet.getLastRowNum();
+		HSSFSheet sheet = hssfWorkbook.getSheetAt(0);
 
-			int lastCellNumber = 0;
+		int lastRowNumer = sheet.getLastRowNum();
 
-			for (int i = 1; i <= lastRowNumer; i++) {
-				HSSFRow row = sheet.getRow(i);
-				lastCellNumber = row.getLastCellNum();
-				for (int j = 0; j < lastCellNumber; j++) {
-					userRegistrationDetails.add(row.getCell(j).getStringCellValue());
-				}
+		int lastCellNumber = 0;
+
+		for (int i = 1; i <= lastRowNumer; i++) {
+			HSSFRow row = sheet.getRow(i);
+			lastCellNumber = row.getLastCellNum();
+			for (int j = 0; j < lastCellNumber; j++) {
+				userRegistrationDetails.add(row.getCell(j).getStringCellValue());
 			}
 		}
-
 		return userRegistrationDetails;
 	}
 
+//DropDown select
 	public static void selectValueFromDropdown(WebElement dropDown, String valueToSelect) {
 		Select select = new Select(dropDown);
 		select.selectByVisibleText(valueToSelect);
 	}
 
+//Datepicker Method
+	public static void selectDateFromDatePicker(WebDriver driver, String month, String year, String dateToSelect) {
+
+		driver.findElement(By.id("dateOfBirthInput")).click();
+
+		WebElement monthDropdown = driver.findElement(By.xpath("//select[@class='react-datepicker__month-select']"));
+		Utility2.selectValueFromDropdown(monthDropdown, month);
+
+		WebElement yearDropdown = driver.findElement(By.xpath("//select[@class='react-datepicker__year-select']"));
+		Utility2.selectValueFromDropdown(yearDropdown, year);
+
+		List<WebElement> dates = driver
+				.findElements(By.xpath("//div[@class='react-datepicker__month-container']//div[@role='option']"));
+		for (WebElement date1 : dates) {
+			if (date1.getText().contains(dateToSelect)) {
+				date1.click();
+				break;
+			}
+
+		}
+
+	}
 }
