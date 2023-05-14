@@ -107,4 +107,6 @@ public class Utility2 {
 		}
 
 	}
-}
+	public void display()
+	{
+	}
