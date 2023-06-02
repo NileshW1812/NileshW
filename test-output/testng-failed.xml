@@ -7,25 +7,17 @@
   <test thread-count="5" name="Test(failed)">
     <groups>
       <run>
-        <include name="e2e"/>
         <include name="sanity"/>
       </run>
     </groups>
     <classes>
-      <class name="TestCase.VerifyOmayoBlogHomePgae">
+      <class name="TestCase4.VerifyUserSingIn">
         <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verifyOmayoHomePage"/>
-        </methods>
-      </class> <!-- TestCase.VerifyOmayoBlogHomePgae -->
-      <class name="TestCase.VerifyRadioButtonAndCheckBox">
-        <methods>
-          <include name="verifyCheckboxAndRadioButtonBehaviours"/>
+          <include name="verifySingIn"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- TestCase.VerifyRadioButtonAndCheckBox -->
+      </class> <!-- TestCase4.VerifyUserSingIn -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

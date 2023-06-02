@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.nilesh.project.Utility2;
-
 import pages2.DemoqaResgistration;
 
 public class VerifyChooseFile {

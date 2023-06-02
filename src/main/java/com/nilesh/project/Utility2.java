@@ -55,7 +55,7 @@ public class Utility2 {
 	}
 
 	public static List<String> readExcel() throws IOException {
-		File file = new File("src/test/resources/Registration3.xls");
+		File file = new File("src/test/resources/SihninData.xls");
 		FileInputStream fileInputStream = new FileInputStream(file);
 
 		List<String> userRegistrationDetails = new ArrayList<String>();

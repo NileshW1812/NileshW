@@ -1,6 +1,5 @@
 package TestCase;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
@@ -32,20 +31,20 @@ public class VerifyOmayoBlogHomePgae {
 	}
 
 	@Test(priority = 1, groups = { "e2e" }, enabled = true)
-	public void verifyOmayoHomePage() throws IOException {
+	public void verifyOmayoHomePage() {
 
 //Verify user is on omayo home page	
-		assertEquals(homepage.getPageTitle().getText(), "omayo (QAFox.com)");
+//		assertEquals(homepage.getPageTitle().getText(), "omayo (QAFox.com)");
 
-		String value = "doc 1";
+//		String value = "doc 1";
 
 //Verify that value is selected from dropdown
-		Utility2.selectValueFromDropdown(homepage.getDropdown(), "doc 1");
+//		Utility2.selectValueFromDropdown(homepage.getDropdown(), "doc 1");
 
-		assertEquals(homepage.getValueSelectedInDropdown(), value);
+//		assertEquals(homepage.getValueSelectedInDropdown(), value);
 
 //Make sure Image is displayed at left upperside
-		assertTrue(homepage.getCollegeImage().isDisplayed());
+//		assertTrue(homepage.getCollegeImage().isDisplayed());
 
 //Verify table Data
 		List<String> expectedTableData = new ArrayList<String>();

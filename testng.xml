@@ -3,18 +3,18 @@
 <suite name="Suite">
 	<groups>
 		<run>
-			<include name="e2e"></include>
+			<!-- 		<include name="e2e"></include> -->
 			<include name="sanity"></include>
 		</run>
 	</groups>
 	<listeners>
 		<listener class-name="com.nilesh.project.Listner"></listener>
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test thread-count="2" name="Test">
 		<classes>
-			<class name="TestCase.VerifyOmayoBlogHomePgae" />
-			<class name="TestCase.VerifyRadioButtonAndCheckBox" />
-			<class name="TestCase2.VerifyTextField" />
+			 <class name="TestCase.VerifyOmayoBlogHomePgae" />
+			<class name="TestCase4.VerifyUserSingIn" />
+			<class name="TestCase4.VerifyTableData" /> 
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

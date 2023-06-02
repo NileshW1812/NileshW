@@ -1,4 +1,4 @@
-package TestCase2;
+	package TestCase2;
 
 import java.io.IOException;
 import java.util.Set;
@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.nilesh.project.Utility2;
-
 import pages2.HomePageOmayo;
 
 public class HandleMultipleWindow {

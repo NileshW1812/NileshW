@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,12 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCase.VerifyRadioButtonAndCheckBox" class="method navigator-link" hash-for-method="verifyCheckboxAndRadioButtonBehaviours">verifyCheckboxAndRadioButtonBehaviours</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCase.VerifyOmayoBlogHomePgae" class="method navigator-link" hash-for-method="verifyOmayoHomePage">verifyOmayoHomePage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCase4.VerifyUserSingIn" class="method navigator-link" hash-for-method="verifySingIn">verifySingIn</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -123,12 +118,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCase2.VerifyTextField" class="method navigator-link" hash-for-method="verifyPasswordTextDisplayed">verifyPasswordTextDisplayed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCase2.VerifyTextField" class="method navigator-link" hash-for-method="verifyUserNameTextDisplayed">verifyUserNameTextDisplayed</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCase4.VerifyTableData" class="method navigator-link" hash-for-method="verifyTableData">verifyTableData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -146,23 +136,23 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">TestCase.VerifyOmayoBlogHomePgae</span>
+              <span class="class-name">TestCase4.VerifyUserSingIn</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyOmayoHomePage">
-                  </a> <!-- verifyOmayoHomePage -->
-                  <span class="method-name">verifyOmayoHomePage</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[@class=&apos;title&apos;]&quot;}
-  (Session info: chrome=113.0.5672.93)
+                  <a name="verifySingIn">
+                  </a> <!-- verifySingIn -->
+                  <span class="method-name">verifySingIn</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;userName&apos;]&quot;}
+  (Session info: chrome=113.0.5672.129)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.9.0&apos;, revision: &apos;d7057100a6&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8c02c892a135fe47f4c963f58ec5c5e0, findElement {using=xpath, value=//h1[@class=&apos;title&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50521}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50521/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c02c892a135fe47f4c963f58ec5c5e0
+Command: [4ace0a50b9f17665743013b3510499cf, findElement {using=xpath, value=//input[@name=&apos;userName&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.129, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:57879}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57879/devtoo..., se:cdpVersion: 113.0.5672.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ace0a50b9f17665743013b3510499cf
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -174,50 +164,9 @@ Session ID: 8c02c892a135fe47f4c963f58ec5c5e0
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at pages.HomePage.setPageTitle(HomePage.java:39)
-	at pages.HomePage.getPageTitle(HomePage.java:34)
-	at TestCase.VerifyOmayoBlogHomePgae.verifyOmayoHomePage(VerifyOmayoBlogHomePgae.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestCase.VerifyRadioButtonAndCheckBox</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCheckboxAndRadioButtonBehaviours">
-                  </a> <!-- verifyCheckboxAndRadioButtonBehaviours -->
-                  <span class="method-name">verifyCheckboxAndRadioButtonBehaviours</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;radio1&apos;]&quot;}
-  (Session info: chrome=113.0.5672.93)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.9.0&apos;, revision: &apos;d7057100a6&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a11cf0ffa4e44fcaf24afbd43ba163ff, findElement {using=xpath, value=//input[@id=&apos;radio1&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50545}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50545/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a11cf0ffa4e44fcaf24afbd43ba163ff
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at pages.HomePage.setMaleRadioButton(HomePage.java:75)
-	at pages.HomePage.getMaleRadioButton(HomePage.java:70)
-	at TestCase.VerifyRadioButtonAndCheckBox.verifyCheckboxAndRadioButtonBehaviours(VerifyRadioButtonAndCheckBox.java:39)
+	at Pages4.Demo99SingInPage.setUsernametext(Demo99SingInPage.java:33)
+	at Pages4.Demo99SingInPage.getUsernametext(Demo99SingInPage.java:28)
+	at TestCase4.VerifyUserSingIn.verifySingIn(VerifyUserSingIn.java:35)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -228,21 +177,14 @@ Session ID: a11cf0ffa4e44fcaf24afbd43ba163ff
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestCase2.VerifyTextField</span>
+              <span class="class-name">TestCase4.VerifyTableData</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPasswordTextDisplayed">
-                  </a> <!-- verifyPasswordTextDisplayed -->
-                  <span class="method-name">verifyPasswordTextDisplayed</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserNameTextDisplayed">
-                  </a> <!-- verifyUserNameTextDisplayed -->
-                  <span class="method-name">verifyUserNameTextDisplayed</span>
+                  <a name="verifyTableData">
+                  </a> <!-- verifyTableData -->
+                  <span class="method-name">verifyTableData</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -259,24 +201,22 @@ Session ID: a11cf0ffa4e44fcaf24afbd43ba163ff
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;e2e&quot;/&gt;
       &lt;include name=&quot;sanity&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;e2e&quot;/&gt;
       &lt;include name=&quot;sanity&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.nilesh.project.Listner&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestCase.VerifyOmayoBlogHomePgae&quot;/&gt;
-      &lt;class name=&quot;TestCase.VerifyRadioButtonAndCheckBox&quot;/&gt;
-      &lt;class name=&quot;TestCase2.VerifyTextField&quot;/&gt;
+      &lt;class name=&quot;TestCase4.VerifyUserSingIn&quot;/&gt;
+      &lt;class name=&quot;TestCase4.VerifyTableData&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -301,26 +241,14 @@ Session ID: a11cf0ffa4e44fcaf24afbd43ba163ff
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">e2e</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyCheckboxAndRadioButtonBehaviours</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyOmayoHomePage</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
               <span class="test-group-name">sanity</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verifyPasswordTextDisplayed</span>
+                <span class="method-in-group-name">verifySingIn</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">verifyUserNameTextDisplayed</span>
+                <span class="method-in-group-name">verifyTableData</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -340,28 +268,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyPasswordTextDisplayed')
-data.setCell(0, 2, 'TestCase2.VerifyTextField')
-data.setCell(0, 3, 349);
+data.setCell(0, 1, 'verifyTableData')
+data.setCell(0, 2, 'TestCase4.VerifyTableData')
+data.setCell(0, 3, 800);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserNameTextDisplayed')
-data.setCell(1, 2, 'TestCase2.VerifyTextField')
-data.setCell(1, 3, 213);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyOmayoHomePage')
-data.setCell(2, 2, 'TestCase.VerifyOmayoBlogHomePgae')
-data.setCell(2, 3, 75);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyCheckboxAndRadioButtonBehaviours')
-data.setCell(3, 2, 'TestCase.VerifyRadioButtonAndCheckBox')
-data.setCell(3, 3, 41);
+data.setCell(1, 1, 'verifySingIn')
+data.setCell(1, 2, 'TestCase4.VerifyUserSingIn')
+data.setCell(1, 3, 73);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 678 ms</span>
+              <span class="suite-total-time">Total running time: 873 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -373,31 +293,17 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyPasswordTextDisplayed</span>
+              <span class="reporter-method-name">verifyTableData</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Test case started verifyPasswordTextDisplayed</span>
-                <span class="reporter-method-output">Test case succededverifyPasswordTextDisplayed</span>
+                <span class="reporter-method-output">Test case started verifyTableData</span>
+                <span class="reporter-method-output">Test case succededverifyTableData</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUserNameTextDisplayed</span>
+              <span class="reporter-method-name">verifySingIn</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Test case started verifyUserNameTextDisplayed</span>
-                <span class="reporter-method-output">Test case succededverifyUserNameTextDisplayed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyCheckboxAndRadioButtonBehaviours</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Test case started verifyCheckboxAndRadioButtonBehaviours</span>
-                <span class="reporter-method-output">Test case failed verifyCheckboxAndRadioButtonBehaviours</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyOmayoHomePage</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Test case started verifyOmayoHomePage</span>
-                <span class="reporter-method-output">Test case failed verifyOmayoHomePage</span>
+                <span class="reporter-method-output">Test case started verifySingIn</span>
+                <span class="reporter-method-output">Test case failed verifySingIn</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -408,11 +314,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">TestCase2.VerifyTextField</span>
+              <span class="ignored-class-name">TestCase4.VerifyUserSingIn</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyloginUsingSendText</span>
+                <span class="ignored-method-name">verifySingIn2</span>
                 <br/>
-                <span class="ignored-method-name">verifyLoginUsingUtilityClass</span>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCase.VerifyOmayoBlogHomePgae</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyOmayoHomePage</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -424,7 +335,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCase.VerifyOmayoBlogHomePgae</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCase4.VerifyUserSingIn</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
@@ -432,56 +343,27 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyOmayoHomePage</span>
-                <span class="method-start">9990 ms</span>
+                <span class="method-name">verifySingIn</span>
+                <span class="method-start">15358 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=verifyOmayoHomePage status=FAILURE method=VerifyOmayoBlogHomePgae.verifyOmayoHomePa...)</span>
-                <span class="method-start">10095 ms</span>
+                <span class="method-name">tearDown([TestResult name=verifySingIn status=FAILURE method=VerifyUserSingIn.verifySingIn()[pri:1, instance:...)</span>
+                <span class="method-start">15440 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCase.VerifyRadioButtonAndCheckBox</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCase4.VerifyTableData</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">11035 ms</span>
+                <span class="method-start">15836 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyCheckboxAndRadioButtonBehaviours</span>
-                <span class="method-start">16426 ms</span>
+                <span class="method-name">verifyTableData</span>
+                <span class="method-start">29055 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=verifyCheckboxAndRadioButtonBehaviours status=FAILURE method=VerifyRadioButtonAndCh...)</span>
-                <span class="method-start">16479 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCase2.VerifyTextField</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">17246 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyPasswordTextDisplayed</span>
-                <span class="method-start">32826 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=verifyPasswordTextDisplayed status=SUCCESS method=VerifyTextField.verifyPasswordTex...)</span>
-                <span class="method-start">33178 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">33689 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyUserNameTextDisplayed</span>
-                <span class="method-start">44456 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=verifyUserNameTextDisplayed status=SUCCESS method=VerifyTextField.verifyUserNameTex...)</span>
-                <span class="method-start">44672 ms</span>
+                <span class="method-name">tearDown([TestResult name=verifyTableData status=SUCCESS method=VerifyTableData.verifyTableData()[pri:1, inst...)</span>
+                <span class="method-start">29860 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

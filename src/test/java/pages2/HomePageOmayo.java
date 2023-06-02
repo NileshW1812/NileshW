@@ -34,9 +34,8 @@ public class HomePageOmayo {
 	WebElement bookcheckbox;
 	WebElement laptopcheckbox;
 	WebElement bagcheckbox;
-
-
-
+	WebElement textbox;
+	WebElement olderdrop1;
 
 	public HomePageOmayo(WebDriver driver) {
 		this.driver = driver;
@@ -201,7 +200,7 @@ public class HomePageOmayo {
 	}
 
 	public void setPencheckbox() {
-		this.pencheckbox =driver.findElement(By.xpath("//input[@value='Pen']"));
+		this.pencheckbox = driver.findElement(By.xpath("//input[@value='Pen']"));
 	}
 
 	public WebElement getBookcheckbox() {
@@ -210,7 +209,7 @@ public class HomePageOmayo {
 	}
 
 	public void setBookcheckbox() {
-		this.bookcheckbox =driver.findElement(By.xpath("//input[@value='Book']"));
+		this.bookcheckbox = driver.findElement(By.xpath("//input[@value='Book']"));
 	}
 
 	public WebElement getLaptopcheckbox() {
@@ -219,7 +218,7 @@ public class HomePageOmayo {
 	}
 
 	public void setLaptopcheckbox() {
-		this.laptopcheckbox =driver.findElement(By.xpath("//input[@value='Laptop']"));
+		this.laptopcheckbox = driver.findElement(By.xpath("//input[@value='Laptop']"));
 	}
 
 	public WebElement getBagcheckbox() {
@@ -228,12 +227,36 @@ public class HomePageOmayo {
 	}
 
 	public void setBagcheckbox() {
-		this.bagcheckbox =driver.findElement(By.xpath("//input[@value='Bag']"));
+		this.bagcheckbox = driver.findElement(By.xpath("//input[@value='Bag']"));
 	}
 
-	public String selectDropdown(String string) {
+	public WebElement getTextbox() {
+		setTextbox();
+		return textbox;
+	}
+
+	public void setTextbox() {
+		this.textbox = driver.findElement(By.id("b-query"));
+	}
+
+	public WebElement getOlderdrop1() {
+		setOlderdrop1();
+		return olderdrop1;
+	}
+
+	public void setOlderdrop1() {
+		this.olderdrop1 = driver.findElement(By.id("drop1"));
+	}
+
+	public String selectDropdown(WebElement webElement, String string) {
 		Select select = new Select(getDropdown());
 		return select.getFirstSelectedOption().getText();
+
+	}
+
+	public static void selectDropdown2(WebElement dropdown, String string) {
+		Select select = new Select(dropdown);
+		select.selectByVisibleText(string);
 
 	}
 

@@ -11,7 +11,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.nilesh.project.Utility2;
-
 import pages.NewToursHomePage;
 import pages.RegistrationPage;
 

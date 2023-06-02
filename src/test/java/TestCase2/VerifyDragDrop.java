@@ -34,6 +34,7 @@ public class VerifyDragDrop {
 		driver.switchTo().frame(frame);
 		Actions actions = new Actions(driver);
 		actions.dragAndDrop(dragdroppage.getDrop(), dragdroppage.getDrag()).perform();
+	
 
 	}
 

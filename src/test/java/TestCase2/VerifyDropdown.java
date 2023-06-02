@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.nilesh.project.Utility2;
-
 import pages.HomePage;
 import pages2.DropDownHomePage;
 
@@ -18,7 +17,7 @@ public class VerifyDropdown {
 	HomePage dropdownhomwpage;
 
 	@BeforeMethod(alwaysRun = true)
-	public void setup() throws IOException {
+	public void setup() {
 		driver = Utility2.getDriver();
 		driver.get(Utility2.getProperty("url"));
 		driver.manage().window().maximize();
